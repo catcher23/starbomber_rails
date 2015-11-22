@@ -1,0 +1,97 @@
+
+  <div class="scoreBoard" >Your Score : 0 - Your Life: 30 - Wave: 1</div>
+  <div class="next">Prepare for the next wave!</div>
+  <div class="gameOver">Game Over</div>
+  <div class="gameOver2">Try Again!</div>
+  <div class="replay">PLAY AGAIN</div>
+
+  <section class='game-box'>
+  <h1 class="start">WELCOME TO STARBOMBER</h1>
+  <h2 class="start startgame" id="clickStart">Click to start!</h2>
+  <br>
+  <div class="start" id="controls">Controls:</div>
+  <div class="start" id="controls2">Arrow Keys, spacebar</div>
+  <div class="start" id="instructions">
+    Instructions: <br/>
+    You control the blue ship. Survive as many waves as you can!
+  </div>
+
+  <h2 class="highScores" id="clickHighScores">High Scores</h2>
+
+  </section>
+
+  <section class='highScoreBox'>
+
+  <h2 class="allScores">dasds</h2>
+  <h2 class="goBack" id="clickBack">Home Screen</h2>
+  <br>
+
+
+  </section>
+  <canvas class="canvas" id='can'></canvas>
+
+  <%= javascript_include_tag "keymaster.js" %>
+  <%= javascript_include_tag "util.js" %>
+  <%= javascript_include_tag "movingObject.js" %>
+  <%= javascript_include_tag "asteroid.js" %>
+  <%= javascript_include_tag "bullet.js" %>
+  <%= javascript_include_tag "ship.js" %>
+  <%= javascript_include_tag "enemy.js" %>
+  <%= javascript_include_tag "guidebullet.js" %>
+  <%= javascript_include_tag "ebullet.js" %>
+  <%= javascript_include_tag "explosion.js" %>
+  <%= javascript_include_tag "game.js" %>
+  <%= javascript_include_tag "gameBg.js" %>
+  <%= javascript_include_tag "gameView.js" %>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+  <script>
+
+    $('.next').hide();
+    $('.gameOver').hide();
+    $('.gameOver2').hide();
+    $('.canvas').hide();
+    $('.scoreBoard').hide();
+    $('.messages').hide();
+    $('.replay').hide();
+    $('.result').hide();
+    $('.highScoreBox').hide();
+
+  $('#clickHighScores').on("click", function () {
+
+    $('.start').hide();
+    $('.game-box').hide();
+    $('.highScoreBox').show();
+  });
+
+  $('#clickBack').on("click", function () {
+    $('.start').show();
+    $('.game-box').show();
+    $('.highScoreBox').hide();
+  });
+    $('#clickStart').on("click", function () {
+    $('.scoreBoard').show();
+    $('.game-box').hide();
+    $('.canvas').show();
+    $('.messages').show();
+    (function () {
+      var canvas1 = document.getElementsByTagName("canvas")[0];
+      canvas1.width = Starbomber.Game.DIM_X;
+      canvas1.height = Starbomber.Game.DIM_Y;
+      var ctx1 = canvas1.getContext("2d");
+
+      game = new Starbomber.Game();
+      gameBg = new Starbomber.GameBg();
+      new Starbomber.GameView(game, gameBg, ctx1).start();
+    })();
+    $('.gameOver2').on('click', function () {
+   location.reload();
+    })
+  }
+
+
+
+
+)
+  </script>
