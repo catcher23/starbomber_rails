@@ -14,10 +14,10 @@
     this.asteroid = new Image();
     this.asteroid.src = 'images/asteroid.png';
   };
-
   Asteroid.COLOR = "#505050";
   Asteroid.RADIUS = 15;
   Asteroid.SPEED = 4;
+debugger;
 
   Starbomber.Util.inherits(Asteroid, Starbomber.MovingObject);
 

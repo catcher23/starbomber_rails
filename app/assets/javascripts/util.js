@@ -2,8 +2,9 @@
   if (typeof Starbomber === "undefined") {
     window.Starbomber = {};
   }
+  var Starbomber = window.Starbomber;
 
-  var Util = Starbomber.Util = {};
+  var Util = Starbomber.Util = function () {};
 
   // Normalize the length of the vector to 1, maintaining direction.
   var dir = Util.dir = function (vec) {
