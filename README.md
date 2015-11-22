@@ -12,7 +12,7 @@ Beware, this game is fun and addictive!
 
 ![screenshot_1]
 
-[screenshot_1]: ./images/ss1.png
+[screenshot_1]: http://res.cloudinary.com/danlau168/image/upload/v1448234137/ss1_copy_otbq9p.png
 
 ## Technology
 Technology used
