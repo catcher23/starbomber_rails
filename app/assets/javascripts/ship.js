@@ -13,8 +13,8 @@
     this.yawSpeed = 20;
     this.ship = new Image();
     this.ship2 = new Image();
-    this.ship.src = 'images/blueship.png';
-    this.ship2.src = 'images/blueship2.png';
+    this.ship.src = 'images/blueship2.png';
+    this.ship2.src = 'images/blueship1.png';
     Starbomber.MovingObject.call(this, options)
   };
 
