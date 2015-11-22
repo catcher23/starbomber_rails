@@ -5,8 +5,6 @@
     Game Over
   </div>
   <div class="gameOver2">Try Again!</div>
-  <div class="replay">PLAY AGAIN</div>
-
   <div class="nameScore">
     Enter your name, record your score!
     <p>
@@ -45,6 +43,19 @@
 
   </section>
   <canvas class="canvas" id='can'></canvas>
+  
+  <script>
+  $('.next').hide();
+  $('.gameOver').hide();
+  $('.gameOver2').hide();
+  $('.nameScore').hide();
+  $('.canvas').hide();
+  $('.scoreBoard').hide();
+  $('.messages').hide();
+  $('.result').hide();
+  $('.highScoreBox').hide();
+  </script>
+
 
   <%= javascript_include_tag "keymaster.js" %>
   <%= javascript_include_tag "util.js" %>
@@ -60,20 +71,10 @@
   <%= javascript_include_tag "gameBg.js" %>
   <%= javascript_include_tag "gameView.js" %>
 
-  
+
 
   <script>
 
-    $('.next').hide();
-    $('.gameOver').hide();
-    $('.gameOver2').hide();
-    $('.nameScore').hide();
-    $('.canvas').hide();
-    $('.scoreBoard').hide();
-    $('.messages').hide();
-    $('.replay').hide();
-    $('.result').hide();
-    $('.highScoreBox').hide();
 
     function getHighScores() {
       $.get(
