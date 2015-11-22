@@ -146,8 +146,6 @@ ctx.setTransform(1,0,0,1,0,0);
         if (this.life < 1) {
           this.remove();
           this.explode();
-
-
           $( '#scoreBoard' ).html( 'Your Score : ' + this.game.score + ' - Your Life : ' + this.game.life+ ' - Wave : ' + this.game.wave);
         }
      }

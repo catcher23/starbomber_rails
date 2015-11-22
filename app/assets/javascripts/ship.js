@@ -82,8 +82,7 @@
   };
 
   Ship.prototype.render = function (ctx) {
-    var that = this;
-    this.ship = new Image();
+
   };
 
   Ship.prototype.draw = function (ctx) {
@@ -120,7 +119,6 @@
     var explosionVel = [
       relVel[0] + this.vel[0], relVel[1] + this.vel[1]
     ];
-
 
 
     var explosion = new Starbomber.Explosion({
@@ -161,7 +159,6 @@ Ship.prototype.proximityTarget = function(otherObject) {
 
          this.collisionCounter = true;
          this.justHit = true;
-
 
          this.game.life -= 1;
      $( '#.scoreBoard' ).html( 'Your Score : ' + this.game.score + ' - Your Life : ' + this.game.life+ ' - Wave : ' + this.game.wave);
