@@ -26,16 +26,24 @@
   		  font-family: 'Racing Sans One', sans-serif;
   		  color: chartreuse;
   		  text-align: center;
-  		  padding: 15px auto;
+  		  padding: 10px auto;
   			transform: translateY(30px);
   		}
+
 
   		h2 {
   		  font-size: 40px;
   		  font-family: 'Racing Sans One', sans-serif;
   		  color: lightblue;
   		  text-align: center;
-  		  margin: 0 auto;
+  		  margin: 20px auto;
+  		}
+  		h4 {
+  		  font-size: 40px;
+  		  font-family: 'Racing Sans One', sans-serif;
+  		  color: lightblue;
+  		  text-align: center;
+        transform: translateY(30px);
   		}
 
   		.start {
@@ -46,7 +54,7 @@
   		  position: relative;
   		  transform: translateY(60px);
   			text-align:center;
-  		  color: lightblue;
+  		  color: white;
   		  font-size: 20px;
   		  font-family: monospace;
   		}
@@ -87,14 +95,14 @@
   		.gameOver2{
   			font-weight:italic;
   			font-size: 20px;
-  			background: green;
+
   			position:absolute;
   			top:0;
-  			left:836px;
+  			left:834px;
   			background:red;
   			color:white;
   			width:100px;
-  			border:2px solid purple;
+
   			text-align:center;
   			-moz-border-radius:0px;
   			-webkit-border-radius:0px;
@@ -104,12 +112,31 @@
   			top:440px;
   			opacity: 50%
   		}
+  		.nameScore{
+  			font-weight:italic;
+  			font-size: 20px;
+
+  			position:absolute;
+  			top:0;
+  			left:715px;
+  			color:white;
+  			width:340px;
+
+  			text-align:center;
+  			-moz-border-radius:0px;
+  			-webkit-border-radius:0px;
+  			border-radius:0px;
+  			z-index: 3;
+  			border-radius: 6px;
+  			top:490px;
+  			opacity: 50%
+  		}
 
   		.gameOver2:hover{
   			background: purple;
   			color:white;
   			cursor: pointer;
-  			border: 2px solid red;
+
   		}
 
   		.replay {
@@ -144,13 +171,13 @@
   			text-align: center;
   		  color: chartreuse;
   		  font-size: 30px;
-
+transform: translateY(-10px);
   		}
 
   		#controls2 {
   		  position: relative;
   			text-align: center;
-  		  transform: translateY(20px);
+  		  transform: translateY(18px);
   		  color: white;
   		  font-size: 30px;
   		}
@@ -197,6 +224,8 @@
   		  margin: 0 auto;
   		  position: relative;
        border-radius: 20px;
+       background: url("http://cdni.wired.co.uk/1240x826/s_v/space_11.jpg");
+
   		}
   		.highScoreBox{
   		  display: block;
@@ -207,6 +236,8 @@
   		  margin: 0 auto;
   		  position: relative;
        border-radius: 20px;
+       background: url("http://cdni.wired.co.uk/1240x826/s_v/space_11.jpg");
+
 
   		}
 
@@ -236,13 +267,12 @@
     cursor: pointer;
    font-weight:italic;
     font-size: 20px;
-    background: green;
     position:absolute;
     top:0;
-    left:450px;
+    left:422px;
     background:rgba(255,0,0,0.8);
     color:white;
-    width:100px;
+    width:135px;
     border:2px solid purple;
     text-align:center;
     -moz-border-radius:0px;
@@ -267,7 +297,7 @@
     left:850px;
     background:rgba(255,0,0,0.8);
     color:white;
-    width:100px;
+    width:90px;
     border:2px solid purple;
     text-align:center;
     -moz-border-radius:0px;
@@ -304,3 +334,10 @@
    border-radius: 6px;
    top:440px;
  };
+
+ .score-table .td{
+border:1px solid green;
+background:green;
+
+
+}

@@ -188,6 +188,12 @@
           $('div.gameOver2').fadeIn({top:440},"slow");
         }, 800)
 
+        setTimeout(function(){
+          $('div.nameScore').fadeIn({top:440},"slow");
+        }, 800)
+
+
+
   };
 
   Game.prototype.nextLevel = function () {
