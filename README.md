@@ -8,8 +8,6 @@ A full stack Javascript game and experiment in physics simulation and proximity 
 
 Go to this link and stay alive!
 
-Beware, this game is fun and addictive!
-
 ![screenshot_1]
 
 [screenshot_1]: http://res.cloudinary.com/danlau168/image/upload/v1448234137/ss1_copy_otbq9p.png
