@@ -14,7 +14,7 @@
     this.ship = new Image();
     this.ship2 = new Image();
     this.ship.src = 'images/blueship2.png';
-    this.ship2.src = 'images/blueship1.png';
+    this.ship2.src = 'images/blueship.png';
     Starbomber.MovingObject.call(this, options)
   };
 
