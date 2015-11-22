@@ -117,9 +117,7 @@ ctx.setTransform(1,0,0,1,0,0);
       $( '#scoreBoard' ).html( 'Your Score : ' + that.game.score + ' - Your Life : ' + that.game.life+ ' - Wave : ' + that.game.wave);
       that.game.nextLevel();
     }, 1000);
-
     }
-
   };
 
 

@@ -11,6 +11,10 @@
     this.justHit = false;
     this.angle = 0;
     this.yawSpeed = 20;
+    this.ship = new Image();
+    this.ship2 = new Image();
+    this.ship.src = 'images/blueship2.png';
+    this.ship2.src = 'images/blueship.png';
     Starbomber.MovingObject.call(this, options)
   };
 
@@ -83,15 +87,15 @@
   };
 
   Ship.prototype.draw = function (ctx) {
-
+    ship = '';
     if (this.justHit) {
-      this.ship.src = 'images/blueship2.png';
-      var that = this;
+      that = this;
       setTimeout(function(){
       that.justHit = false;
       }, 100);
+        ship = this.ship;
       } else {
-        this.ship.src = 'images/blueship.png';
+        ship = this.ship2;
       }
 
     ctx.translate(this.pos[0],this.pos[1]);    // translate to center of rotation
@@ -99,7 +103,7 @@
     ctx.translate(-this.pos[0],-this.pos[1]);  // translate back
          // draw image
 
-    ctx.drawImage(this.ship, this.pos[0]-23,this.pos[1]-23, this.radius*Math.PI , this.radius*Math.PI );
+    ctx.drawImage(ship, this.pos[0]-23,this.pos[1]-23, this.radius*Math.PI , this.radius*Math.PI );
     ctx.setTransform(1,0,0,1,0,0);
   };
 
