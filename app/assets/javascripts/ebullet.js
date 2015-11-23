@@ -5,7 +5,8 @@
 
   var Ebullet = Starbomber.Ebullet = function (options) {
     options.radius = Ebullet.RADIUS;
-
+    this.ebullet = new Image();
+    this.ebullet.src = 'images/redball2.png';
     Starbomber.MovingObject.call(this, options);
   };
 
@@ -45,11 +46,7 @@
   };
 
   Ebullet.prototype.draw = function (ctx) {
-
-    var ebullet = ebullet || new Image();
-    ebullet.src = 'images/redball2.png';
-
-    ctx.drawImage(ebullet, this.pos[0]-5,this.pos[1]-5, this.radius*2.5*Math.PI , this.radius*2.5*Math.PI );
+    ctx.drawImage(this.ebullet, this.pos[0]-5,this.pos[1]-5, this.radius*2.5*Math.PI , this.radius*2.5*Math.PI );
   };
 
   Ebullet.prototype.isWrappable = false;

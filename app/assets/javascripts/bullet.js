@@ -5,8 +5,9 @@
 
   var Bullet = Starbomber.Bullet = function (options) {
     options.radius = Bullet.RADIUS;
-
     Starbomber.MovingObject.call(this, options);
+    this. bullet = new Image();
+    this.bullet.src = 'images/greenball2.png';
   };
 
   Bullet.RADIUS = 2;
@@ -50,11 +51,7 @@ Bullet.prototype.render = function (ctx) {
 };
 
   Bullet.prototype.draw = function (ctx) {
-
-    var bullet = new Image();
-    bullet.src = 'images/greenball2.png';
-
-    ctx.drawImage(bullet, this.pos[0]-6,this.pos[1]-6, this.radius*3*Math.PI , this.radius*3*Math.PI );
+    ctx.drawImage(this.bullet, this.pos[0]-6,this.pos[1]-6, this.radius*3*Math.PI , this.radius*3*Math.PI );
   };
 
   Bullet.prototype.isWrappable = false;
